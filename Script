@@ -1,0 +1,202 @@
+DeathRecords:
+LOAD Id,
+    ResidentStatus,
+    Education1989Revision,
+    Education2003Revision,
+    EducationReportingFlag,
+    MonthOfDeath,
+    Month(MakeDate(2014,MonthOfDeath)) as MonthName,
+    Sex,
+    AgeType,
+    Age,
+    AgeSubstitutionFlag,
+    AgeRecode52,
+    AgeRecode27,
+    AgeRecode12,
+    InfantAgeRecode22,
+    PlaceOfDeathAndDecedentsStatus,
+    MaritalStatus,
+    DayOfWeekOfDeath,
+    CurrentDataYear,
+    InjuryAtWork,
+    MannerOfDeath,
+    MethodOfDisposition ,
+    Autopsy,
+    ActivityCode,
+    PlaceOfInjury,
+    Icd10Code,
+    CauseRecode358,
+    CauseRecode113,
+    InfantCauseRecode130,
+    CauseRecode39,
+    NumberOfEntityAxisConditions,
+    NumberOfRecordAxisConditions,
+    Race,
+    BridgedRaceFlag,
+    RaceImputationFlag,
+    RaceRecode3,
+    RaceRecode5,
+    HispanicOrigin,
+    HispanicOriginRaceRecode;
+SQL SELECT *
+FROM DeathRecords;
+
+EntityAxisConditions:
+LOAD Id as EntityAxisConditionsId,
+    DeathRecordId as Id,
+    Part,
+    Line,
+    Sequence,
+    Icd10Code as EACId;
+SQL SELECT *
+FROM EntityAxisConditions;
+
+RecordAxisConditions:
+LOAD Id as RecordAxisConditionsId,
+    DeathRecordId as Id,
+    Icd10Code as RACId;
+SQL SELECT *
+FROM RecordAxisConditions;
+
+ActivityCode:
+LOAD Code as ActivityCode,
+    Description as ActivityCode_Description;
+SQL SELECT *
+FROM ActivityCode;
+
+
+LOAD Code as AgeRecode12,
+    Description as AgeRecode12Description;
+SQL SELECT *
+FROM AgeRecode12;
+
+LOAD Code as AgeRecode27,
+    Description as AgeRecode27Description;
+SQL SELECT *
+FROM AgeRecode27;
+
+AgeRecode52:
+LOAD Code as AgeRecode52,
+    Description as AgeRecode52Description;
+SQL SELECT *
+FROM AgeRecode52;
+
+AgeType:
+LOAD Code as AgeType,
+    Description as AgeTypeDescription;
+SQL SELECT *
+FROM AgeType;
+
+BridgedRaceFlag:
+LOAD Code as BridgedRaceFlag,
+    Description as BridgedRaceFlagDescription;
+SQL SELECT *
+FROM BridgedRaceFlag;
+
+DayOfWeekOfDeath:
+LOAD Code as DayOfWeekOfDeath,
+    Description as DayOfWeekOfDeathDescription;
+SQL SELECT *
+FROM DayOfWeekOfDeath;
+
+Education1989Revision:
+LOAD Code as Education1989Revision,
+    Description as Education1989RevisionDescription;
+SQL SELECT *
+FROM Education1989Revision;
+
+Education2003Revision:
+LOAD Code as Education2003Revision,
+    Description as Education2003RevisionDescription;
+SQL SELECT *
+FROM Education2003Revision;
+
+EducationReportingFlag:
+LOAD Code as EducationReportingFlag,
+    Description as EducationReportingFlagDescription;
+SQL SELECT *
+FROM EducationReportingFlag;
+
+HispanicOrigin:
+LOAD Code as HispanicOrigin,
+    Description as HispanicOriginDescription;
+SQL SELECT *
+FROM HispanicOrigin;
+
+HispanicOriginRaceRecode:
+LOAD Code as HispanicOriginRaceRecode,
+    Description as HispanicOriginRaceRecodeDescription;
+SQL SELECT *
+FROM HispanicOriginRaceRecode;
+
+Icd10Code:
+LOAD Code as Icd10Code,
+    Description as Icd10CodeDescription;
+SQL SELECT *
+FROM Icd10Code;
+
+InfantAgeRecode22:
+LOAD Code as InfantAgeRecode22,
+    Description as InfantAgeRecode22Description;
+SQL SELECT *
+FROM InfantAgeRecode22;
+
+MannerOfDeath:
+LOAD Code as MannerOfDeath,
+    Description as MannerOfDeathDescription;
+SQL SELECT *
+FROM MannerOfDeath;
+
+MaritalStatus:
+LOAD Code as MaritalStatus,
+    Description as MaritalStatusDescription;
+SQL SELECT *
+FROM MaritalStatus;
+
+MethodOfDisposition:
+LOAD Code as MethodOfDisposition,
+    Description as MethodOfDispositionDescription;
+SQL SELECT *
+FROM MethodOfDisposition;
+
+PlaceOfDeathAndDecedentsStatus:
+LOAD Code as PlaceOfDeathAndDecedentsStatus,
+    Description as PlaceOfDeathAndDecedentsStatusDescription;
+SQL SELECT *
+FROM PlaceOfDeathAndDecedentsStatus;
+
+PlaceOfInjury:
+LOAD Code as PlaceOfInjury,
+    Description as PlaceOfInjuryDescription;
+SQL SELECT *
+FROM PlaceOfInjury;
+
+Race:
+LOAD Code as Race,
+    Description as RaceDescription;
+SQL SELECT *
+FROM Race;
+
+RaceImputationFlag:
+LOAD Code as RaceImputationFlag,
+    Description as RaceImputationFlagDescription;
+SQL SELECT *
+FROM RaceImputationFlag;
+
+RaceRecode5:
+LOAD Code as RaceRecode5,
+    Description as RaceRecode5Description;
+SQL SELECT *
+FROM RaceRecode5;
+
+RaceRecode3:
+LOAD Code as RaceRecode3,
+    Description as RaceRecode3description;
+SQL SELECT *
+FROM RaceRecode3;
+
+ResidentStatus:
+LOAD Code as ResidentStatus,
+    Description as ResidentStatusDescription;
+SQL SELECT *
+FROM ResidentStatus;
